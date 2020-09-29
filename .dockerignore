@@ -1,2 +1,3 @@
 .gitignore
 .env.local
+app/db.sqlite

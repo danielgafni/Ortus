@@ -1,4 +1,5 @@
 .env.local
+app/db.sqlite
 #node_modules/
 
 ### Node template

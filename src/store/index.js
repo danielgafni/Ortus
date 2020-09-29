@@ -2,8 +2,9 @@ import Vue from "vue";
 import Vuex from "vuex";
 import createPersistedState from "vuex-persistedstate";
 
-// import signup from "./signup.module";
-// import user from "./user.module"
+// import signup.py from "./signup.py.module";
+import user from "./user.module"
+import signup from "./signup.module"
 
 Vue.use(Vuex);
 
@@ -12,6 +13,6 @@ export default new Vuex.Store({
         storage: window.sessionStorage,
     })],
     modules: {
-        signup, user
+        user, signup
     }
 });

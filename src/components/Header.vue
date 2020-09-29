@@ -9,7 +9,7 @@
         class="logo mr-auto"
         data-cy="logo"
       >
-        <a href="/">ORTUS 💫</a>
+        <a href="/">ORTUS</a>
       </h1>
 
       <b-navbar class="nav-menu d-none d-lg-block">
