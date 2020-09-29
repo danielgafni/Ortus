@@ -10,6 +10,12 @@ flask = "*"
 python-dotenv = "*"
 flask-login = "*"
 flask-basicauth = "*"
+flask-admin = "*"
+flask-sqlalchemy = "*"
+flask-cors = "*"
+flask-migrate = "*"
+flask-restx = "*"
+requests = "*"
 
 [requires]
 python_version = "3.8"
