@@ -10,6 +10,7 @@ RUN apk update
 RUN apk add python3 py-pip openssl
 RUN pip install pipenv
 RUN pipenv install
+RUN pipenv run yarn upgrade
 RUN pipenv run yarn install
 
 COPY . .
