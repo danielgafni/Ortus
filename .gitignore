@@ -1,5 +1,5 @@
-app.db
-
+.env.local
+node_modules/
 
 # Created by .ignore support plugin (hsz.mobi)
 ### JetBrains template
