@@ -18,6 +18,7 @@ module.exports = {
       }
     },
     // env: require('./.env.development'),
-    port: process.env.VUE_APP_UI_BASE
+    port: process.env.VUE_APP_UI_BASE,
+    disableHostCheck: true
   }
 }

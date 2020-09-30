@@ -32,3 +32,5 @@ CMD ["pipenv", "run", "flask", "run"]
 CMD ["pipenv", "run", "yarn", "serve"]
 
 EXPOSE 8080
+
+CMD ["nginx", "-g", "daemon off;"]
