@@ -42,7 +42,7 @@ def create_app() -> Flask:
 
     # Setup the API
     app.register_blueprint(api_bp)
-    CORS(app, resources={r"/api/*": {"origins": "*"}})
+    # CORS(app, resources={r"/api/*": {"origins": "*"}})
 
     app.logger.info(">>> Up and running.")
 
