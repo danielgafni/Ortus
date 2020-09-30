@@ -14,8 +14,10 @@ module.exports = {
     proxy: {
       '/api*': {
         // Forward frontend dev server request for /api to Flask dev server
-        target: 'http://localhost:5000/'
+        target: process.env.FLASK_API_BASE
       }
-    }
+    },
+    // env: require('./.env.development'),
+    port: process.env.VUE_APP_UI_BASE
   }
 }
