@@ -15,7 +15,7 @@
         </div>
         <div class="row justify-content-center signup-section">
           <div class="col-lg-6 pt-4 d-flex flex-column justify-content-center">
-            <h4>Register now!:</h4>
+            <h4>Register now!</h4>
             <form
               @submit.prevent="submitSignup"
             >
