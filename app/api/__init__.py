@@ -11,7 +11,7 @@ api_rest: Api = Api(api_bp)
 
 @api_bp.after_request
 def add_header(response):
-    # response.headers["Access-Control-Allow-Headers"] = "Content-Type,Authorization"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type,Authorization"
     response.headers["Access-Control-Allow-Origin"] = "*" #Config.UI_BASE
     return response
 
