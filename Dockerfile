@@ -33,4 +33,4 @@ CMD ["pipenv", "run", "yarn", "serve"]
 
 EXPOSE 8080
 
-CMD ["nginx", "-g", "daemon off;"]
+#CMD ["nginx", "-g", "daemon off;"]
