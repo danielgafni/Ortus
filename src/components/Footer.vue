@@ -5,8 +5,9 @@
         class="copyright"
         data-cy="copyright"
       >
-        &copy; Copyright <strong><span>Ortus</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Ortus</span></strong>. All Rights Reserved. <a href="https://github.com/danielgafni/ortus">Source code</a>
       </div>
+      <div></div>
 <!--      <div class="social-links">-->
 <!--        <a -->
 <!--          class="twitter" -->

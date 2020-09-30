@@ -108,7 +108,7 @@
                 axios.defaults.headers.common['Authorization'] = token
                 let isVerified = resp.data["is_verified"]
                 this.$store.dispatch('user/load', {token: token, verified: isVerified})
-                this.$router.push("/dashboard")
+                this.$router.push("/passwords")
               }
               else if (resp.status === 401) {
                 alert("Wrong email or password")

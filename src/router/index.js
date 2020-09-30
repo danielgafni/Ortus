@@ -5,7 +5,7 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import Login from '@/views/Login.vue'
 import Register from '@/views/Register.vue'
-// import Onboarding from '@/views/Onboarding.vue'
+import Passwords from '@/views/Passwords.vue'
 // import Dashboard from '@/views/Dashboard.vue'
 // import Verify from '@/views/Verify.vue'
 
@@ -47,12 +47,12 @@ const routes = [
     name: 'register',
     component: Register
   },
-  // {
-  //   path: '/onboarding',
-  //   name: 'onboarding',
-  //   component: Onboarding,
-  //   // beforeEnter: ifAuthenticated  DRAFT
-  // },
+  {
+    path: '/passwords',
+    name: 'passwords',
+    component: Passwords,
+    // beforeEnter: ifAuthenticated  DRAFT
+  },
   // {
   //   path: '/dashboard',
   //   name: 'dashboard',
