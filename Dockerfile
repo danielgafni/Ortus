@@ -26,6 +26,9 @@ RUN echo SECRET_VALIDATOIN_KEY=$(openssl rand -hex 50) >> .env.local
 
 #RUN pipenv run flask db init
 #RUN pipenv run flask db migrate
-RUN pipenv run flask db upgrade
+#RUN pipenv run flask db upgrade
+
+CMD ["pipenv", "run", "flask", "run"]
+CMD ["pipenv", "run", "yarn", "serve"]
 
 EXPOSE 8080
