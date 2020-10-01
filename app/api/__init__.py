@@ -8,7 +8,7 @@ logging.getLogger('flask_cors').level = logging.DEBUG
 
 
 api_bp = Blueprint("api_bp", __name__, url_prefix="/api")
-CORS(api_bp, resources={"/api/*": {"origins": "*"}})
+# CORS(api_bp, resources={"/api/*": {"origins": "*"}})
 api_rest: Api = Api(api_bp)
 
 

@@ -5,7 +5,7 @@ from . import api_rest
 
 
 @api_rest.route("/logout", methods=["POST"])
-@cross_origin()
+# @cross_origin()
 class LogoutAPI(Resource):
     @login_required
     def post(self):

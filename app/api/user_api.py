@@ -17,7 +17,7 @@ marshall_fields = {
 
 
 @api_rest.route("/users", methods=["POST"])
-@cross_origin()
+# @cross_origin()
 class UserAPI(Resource):
     @marshal_with(marshall_fields, envelope="resource")
     def post(self):

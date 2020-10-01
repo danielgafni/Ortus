@@ -7,7 +7,7 @@ from app.models import User
 
 
 @api_rest.route("/login", methods=["POST"])
-@cross_origin()
+# @cross_origin()
 class LoginAPI(Resource):
     def post(self):
         # If, for some reason a user is logged in... we should actually login the new user.
