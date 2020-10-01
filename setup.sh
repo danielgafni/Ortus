@@ -49,7 +49,7 @@ fi
 
 echo "Please submit MAILGUN_API_KEY :"
 read -r MAILGUN_API_KEY
-echo "MAILGUN_DOMAIN_NAME=\"$MAILGUN_API_KEY\"" >> .env
+echo "MAILGUN_API_KEY=\"$MAILGUN_API_KEY\"" >> .env
 
 echo "Please submit MAILGUN_DOMAIN_NAME :"
 read -r MAILGUN_DOMAIN_NAME
