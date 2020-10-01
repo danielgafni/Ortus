@@ -74,6 +74,6 @@ class User(db.Model, UserMixin):
                 "to": [self.email],
                 "subject": "Ortus account verification",
                 "text": f"Please verify your account by visiting this link:\n\n"
-                f"{Config.UI_BASE}/account/verify/?token={self.generate_verification_token()}",
+                f"{Config.VUE_APP_BASE}:{Config.APP_UI_PORT}/account/verify/?token={self.generate_verification_token()}",
             },
         )

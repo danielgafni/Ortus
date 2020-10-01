@@ -9,7 +9,9 @@
 
 -   edit `app/api/__init__.py`
 
--   production 
+-   production with `nginx`
+
+-   edit `src/services/Api.js`
 
 # Starting the application on a remote server
 

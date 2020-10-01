@@ -21,8 +21,9 @@ RUN pipenv run yarn install
 COPY . .
 
 RUN cp .env.local.sample .env.local
-RUN echo SECRET_KEY=$(openssl rand -hex 50) >> .env.local
-RUN echo SECRET_VALIDATOIN_KEY=$(openssl rand -hex 50) >> .env.local
+#RUN echo "NODE_ENV=production" >> .env.local
+#RUN echo SECRET_KEY=$(openssl rand -hex 50) >> .env.local
+#RUN echo SECRET_VALIDATOIN_KEY=$(openssl rand -hex 50) >> .env.local
 
 #RUN pipenv run flask db init
 #RUN pipenv run flask db migrate

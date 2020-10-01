@@ -1,24 +1,24 @@
 // const IS_PRODUCTION = process.env.NODE_ENV === 'production'
+let VUE_APP_BASE = process.env.VUE_APP_BASE
+let APP_API_PORT = process.env.APP_API_PORT
+let VUE_APP_API_ENDPOINT = VUE_APP_BASE.concat(":", APP_API_PORT)
+
+// import axios from 'axios'
+// axios.defaults.baseURL = VUE_APP_API_ENDPOINT.concat('/api')
 
 module.exports = {
   outputDir: 'dist',
   assetsDir: 'static',
-  // baseUrl: IS_PRODUCTION
-  // ? 'http://cdn123.com'
-  // : '/',
-  // For Production, replace set baseUrl to CDN
-  // And set the CDN origin to `yourdomain.com/static`
-  // Whitenoise will serve once to CDN which will then cache
-  // and distribute
+  // publicPath: process.env.VUE_APP_BASE_URL.concat(":", process.env.VUE_APP_UI_PORT),
   devServer: {
     proxy: {
       '/api*': {
-        // Forward frontend dev server request for /api to Flask dev server
-        target: process.env.FLASK_API_BASE
+        // Forward frontend dev server request for /api to Flask server
+        target: VUE_APP_API_ENDPOINT
+        // target: "http://localhost/5000/"
       }
     },
-    // env: require('./.env.development'),
-    port: process.env.VUE_APP_PORT,
+    port: process.env.APP_UI_PORT,
     disableHostCheck: true
   }
 }

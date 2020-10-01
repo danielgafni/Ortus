@@ -14,16 +14,17 @@ class Config:
     FLASK_ENV = os.getenv("FLASK_ENV")
     assert FLASK_ENV, "FLASK_ENV should be set"
 
-    load_dotenv()  # default application settings
-    load_dotenv(
-        find_dotenv(f".env.{FLASK_ENV.lower()}")
-    )  # load environment specific config
+    # load_dotenv()  # default application settings
+    # load_dotenv(
+    #     find_dotenv(f".env.{FLASK_ENV.lower()}")
+    # )  # load environment specific config
 
     SECRET_KEY = os.getenv("SECRET_KEY", "super-mega-secret-key")
     SECRET_VALIDATION_KEY = os.getenv("SECRET_VALIDATION_KEY", "super-mega-secret-validation-key")
 
-    API_BASE = os.getenv("VUE_APP_API_BASE")
-    UI_BASE = os.getenv("VUE_APP_UI_BASE")
+    VUE_APP_BASE = os.getenv("VUE_APP_API_BASE")
+    APP_API_PORT = os.getenv("APP_API_PORT")
+    APP_UI_PORT = os.getenv("APP_UI_PORT")
 
     if FLASK_ENV == "testing":
         sqlite = "sqlite:///" + os.path.join(ROOT_DIR, "tests", "db.sqlite")
