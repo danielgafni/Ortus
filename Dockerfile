@@ -20,7 +20,8 @@ RUN pipenv run yarn install
 
 COPY . .
 
-RUN cp .env.sample .env
+RUN touch ./.env
+RUN touch ./app/db.sqlite
 #RUN echo "NODE_ENV=production" >> .env.local
 #RUN echo SECRET_KEY=$(openssl rand -hex 50) >> .env.local
 #RUN echo SECRET_VALIDATOIN_KEY=$(openssl rand -hex 50) >> .env.local
@@ -29,6 +30,7 @@ RUN cp .env.sample .env
 #RUN pipenv run flask db migrate
 #RUN pipenv run flask db upgrade
 
+CMD ["cat", ".env"]
 CMD ["pipenv", "run", "flask", "run"]
 CMD ["pipenv", "run", "yarn", "serve"]
 
