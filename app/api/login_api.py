@@ -1,13 +1,13 @@
 from flask import request, jsonify, make_response
 from flask_login import login_user, current_user, logout_user
-
-
 from flask_restx import Resource, abort
+from flask_cors import cross_origin
 from . import api_rest
 from app.models import User
 
 
 @api_rest.route("/login", methods=["POST"])
+@cross_origin()
 class LoginAPI(Resource):
     def post(self):
         # If, for some reason a user is logged in... we should actually login the new user.

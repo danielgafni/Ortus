@@ -1,6 +1,6 @@
 from flask import request, abort
 from flask_restx import Resource, marshal_with, fields
-
+from flask_cors import cross_origin
 from . import api_rest
 from app.models import User, db
 
@@ -17,6 +17,7 @@ marshall_fields = {
 
 
 @api_rest.route("/users", methods=["POST"])
+@cross_origin()
 class UserAPI(Resource):
     @marshal_with(marshall_fields, envelope="resource")
     def post(self):

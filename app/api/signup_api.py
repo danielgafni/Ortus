@@ -1,5 +1,6 @@
 from sqlalchemy.exc import IntegrityError
 from flask import request
+from flask_cors import cross_origin
 from flask_restx import Resource, abort, marshal_with, fields
 from . import api_rest
 from app.models import Signup, db
@@ -14,6 +15,7 @@ marshall_fields = {
 
 
 @api_rest.route("/signups", methods=["POST"])
+@cross_origin
 class SignupAPI(Resource):
     @marshal_with(marshall_fields, envelope="resource")
     def post(self):
