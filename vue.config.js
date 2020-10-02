@@ -15,7 +15,7 @@ module.exports = {
       '/api*': {
         // Forward frontend dev server request for /api to Flask server
         // target: VUE_APP_API_ENDPOINT
-        target: process.env.BASE_URL.concat(":5000")
+        target: "http://0.0.0.0:5000"
       }
     },
     port: "8080",

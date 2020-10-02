@@ -17,6 +17,7 @@ COPY yarn.lock ./
 COPY src ./src
 RUN pipenv run yarn upgrade
 RUN pipenv run yarn install
+RUN pipenv run yarn build
 
 COPY . .
 

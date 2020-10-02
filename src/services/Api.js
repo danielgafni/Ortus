@@ -3,11 +3,10 @@ import axios from 'axios'
 // let VUE_APP_BASE = process.env.VUE_APP_BASE
 // let VUE_APP_API_ENDPOINT = VUE_APP_BASE.concat(':5000/api')  // TODO: find a way to load the port from .env
 // console.log(VUE_APP_API_ENDPOINT)
-
 export default() => {
     return axios.create({
         // baseURL: VUE_APP_API_ENDPOINT,
-        baseURL: process.env.BASE_URL.concat(":5000/api"),
+        baseURL: "http://0.0.0.0:5000/api",
         withCredentials: false,
         headers: {
             'Accept': 'application/json',
