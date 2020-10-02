@@ -31,8 +31,8 @@ RUN touch ./app/db.sqlite
 #RUN pipenv run flask db upgrade
 
 CMD ["cat", ".env"]
-CMD ["pipenv", "run", "flask", "run"]
-CMD ["pipenv", "run", "yarn", "serve"]
+CMD ["pipenv", "run", "flask", "run", "--host", "0.0.0.0"]
+CMD ["pipenv", "run", "yarn", "serve", "--host", "0.0.0.0"]
 
 EXPOSE 8080
 EXPOSE 5000
