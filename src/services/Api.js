@@ -7,7 +7,7 @@ import axios from 'axios'
 export default() => {
     return axios.create({
         // baseURL: VUE_APP_API_ENDPOINT,
-        baseURL: env.process.BASE_URL.concat(":5000/api"),
+        baseURL: process.env.BASE_URL.concat(":5000/api"),
         withCredentials: false,
         headers: {
             'Accept': 'application/json',
