@@ -69,7 +69,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.VUE_APP_BASE.concat(":", process.env.APP_UI_PORT),
+  base: "http://0.0.0.0:8080",
   routes
 })
 
