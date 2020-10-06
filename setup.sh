@@ -42,7 +42,7 @@ then
   echo "VUE_APP_BASE=\"$VUE_APP_BASE_URL\"" >> .env
 elif [ "$MODE" == "development" ]
 then
-  pass
+  :
 else
   exit 1
 fi
